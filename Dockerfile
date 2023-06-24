@@ -1,8 +1,8 @@
 # Use the official Node.js image as the base image
 FROM node:20.3.1-alpine3.17
 
-# Install Wrangler
-RUN npm install -g wrangler@3.1.1
+# Install latest version of Wrangler
+RUN npm i -g wrangler
 
 # Set the working directory in the container
 WORKDIR /app
