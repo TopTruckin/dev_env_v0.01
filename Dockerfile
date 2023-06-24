@@ -10,6 +10,9 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+# Install Wrangler
+RUN npm install -g @cloudflare/wrangler
+
 # Copy the rest of the application code to the working directory
 COPY . .
 
