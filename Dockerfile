@@ -1,5 +1,5 @@
 # Use the official Node.js image as the base image
-FROM node:14-alpine
+FROM node:20.3.1-alpine3.17
 
 # Set the working directory in the container
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Install Wrangler
-RUN npm install -g wrangler
+RUN npm install -g wrangler@3.1.1
 
 # Copy the rest of the application code to the working directory
 COPY . .
